@@ -8,22 +8,22 @@ is build using XML and the backend is build using JAVA.
 When the absence of internet user is communicating with the phone via SMS service. And executed actions using the desired SMS commands.
 
 WEb part :
-login
-sign up
-call log view
-massege log view
-phone lock
-sound alert
-zone alert
-sim details view
-forgot password (Flask mail extension)
-location view
+login,
+sign up,
+call log view,
+massege log view,
+phone lock,
+sound alert,
+zone alert,
+sim details view,
+forgot password (Flask mail extension),
+location view,
 
 ANDROID part:
-call log 
-massege log
-phone lock (Also absece of internet)
-sound alert(Also absence of internet)
-sim details
-zone
+call log ,
+massege log,
+phone lock (Also absece of internet),
+sound alert(Also absence of internet),
+sim details,
+zone,
 location (also absence of internet)
