@@ -1,0 +1,29 @@
+{% extends "ii.html" %}
+{% block body %}
+    <body>
+    <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300"> Messages</h4>
+        <table border="1" class="w-full whitespace-no-wrap">
+            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+>
+                <td class="px-4 py-3">S/No</td>
+                <td class="px-4 py-3">Phone Number</td>
+                <td class="px-4 py-3">Date</td>
+                <td class="px-4 py-3">Time</td>
+                <td class="px-4 py-3">Type</td>
+                <td class="px-4 py-3">Message</td>
+            </tr>
+            {% for i in data %}
+            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                <td class="px-4 py-3">{{ loop.index }}</td>
+                <td class="px-4 py-3">{{i['Phone_Number']}}</td>
+                <td class="px-4 py-3">{{ i['Date'] }}</td>
+                <td class="px-4 py-3">{{ i['Time'] }}</td>
+                <td class="px-4 py-3">{{ i['type'] }}</td>
+                <td class="px-4 py-3">{{ i['Message'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    <br>
+    <br>
+    </body>
+{% endblock %}

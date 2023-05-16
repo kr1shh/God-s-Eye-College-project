@@ -1,0 +1,30 @@
+{% extends "ii.html" %}
+{% block body %}
+    <body>
+        <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Location</h4>
+        <table border="1" class="w-full whitespace-no-wrap">
+            <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                <td rowspan="2"  class="px-4 py-3">S/No</td>
+                <td rowspan="2"  class="px-4 py-3">Time</td>
+                <td rowspan="2"  class="px-4 py-3">date</td>
+                <td colspan="2"  class="px-4 py-3">cordinates</td>
+            </tr>
+            <tr  class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+               <td  class="px-4 py-3">Lattitude</td>
+               <td  class="px-4 py-3">Longitude</td>
+            </tr>
+        {% for i in data %}
+            <tr >
+                <td  class="px-4 py-3">{{ loop.index }}</td>
+                <td class="px-4 py-3">{{i['Time']}}</td>
+                <td  class="px-4 py-3">{{i['Date']}}</td>
+                <td  class="px-4 py-3">{{i['Lattitude']}}</td>
+                <td  class="px-4 py-3">{{i['longitude']}}</td>
+                <td  class="px-4 py-3"><a href="http://maps.google.com?q= {{i['Lattitude']}},{{i['longitude']}}" class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Map</a></td>
+            </tr>
+         {% endfor %}
+        </table>
+    <br>
+    <br>
+    </body>
+  {% endblock %}

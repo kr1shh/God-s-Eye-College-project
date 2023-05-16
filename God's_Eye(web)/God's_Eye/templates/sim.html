@@ -1,0 +1,25 @@
+{% extends "ii.html" %}
+{% block body %}
+<body>
+    <h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Sim Card </h4>
+    <table border="2" class="w-full whitespace-no-wrap">
+        <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+>
+            <td class="px-4 py-3">Simid</td>
+            <td class="px-4 py-3">Simserialno</td>
+            <td class="px-4 py-3">Simno</td>
+            <td class="px-4 py-3">Deviceid</td>
+            </tr>
+        {% for i in data %}
+        <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            <td class="px-4 py-3 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">{{ i['simid'] }}</td>
+            <td class="px-4 py-3 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">{{ i['simserialno'] }}</td>
+            <td class="px-4 py-3 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">{{ i['simno'] }}</td>
+            <td class="px-4 py-3 dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">{{ i['deviceid'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+</body>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "ii.html" %}
+{% block body %}
+<body>
+<h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Protect</h4>
+<form action="/lock_update" method="post">
+    <table class="w-full whitespace-no-wrap">
+        <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            <td  class="px-4 py-3">
+                Message :
+            </td>
+            <td  class="px-4 py-3"><input type="text" name="msg"></td>
+        </tr>
+        <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            {% if data["touch"] =="Enabled" %}
+            <td><input type="submit" name="lock" value="Lock" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"></td>
+       {% else %}
+               <td><input type="submit" name="lock" value="Unlock" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"></td>
+
+            {%endif%}
+        </tr>
+    </table>
+</form>
+<script type=""></script>
+<br>
+<br>
+</body>
+  {% endblock %}

@@ -1,0 +1,37 @@
+ {% extends "ii.html" %}
+{% block body %}
+
+<body>
+<h2 class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+>
+  Zones
+</h2>
+    <table border="1" class="w-full whitespace-no-wrap">
+  <thead>
+  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+
+  <td class="px-4 py-3">Sl No.</td>
+  <td class="px-4 py-3">Zone</td>
+  <td class="px-4 py-3">Date</td>
+  <td class="px-4 py-3">Time</td>
+  </tr>
+  </thead>
+  {% for i in data %}
+  <tbody>
+  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+
+    <td class="px-4 py-3">{{ loop.index }}</td>
+    <td class="px-4 py-3">{{ i['zone'] }}</td>
+    <td class="px-4 py-3">{{ i['date'] }}</td>
+    <td class="px-4 py-3">{{ i['time'] }}</td>
+    <td class="px-4 py-3"><a href="/zonedefault/{{ i['zoneid']  }}" class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">Active</a></td>
+
+  </tr>
+  </tbody>
+  {% endfor %}
+  <br>
+  <br>
+</table>
+  <a href="/home">Home</a>
+</body>
+  {% endblock %}

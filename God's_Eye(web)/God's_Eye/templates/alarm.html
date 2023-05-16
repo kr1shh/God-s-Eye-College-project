@@ -1,0 +1,22 @@
+{% extends "ii.html" %}
+{% block body %}
+<body>
+<form action="/alarm_update" method="post">
+<table>
+  <tr>
+    <td><h2> Sound</h2></td>
+  </tr>
+  <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+  <td>
+    <input type="button" name="alarm" value="play"></td>
+ <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            {% if data["alarm"] =="Enabled" %}
+            <td><input type="submit" name="alarm" value="enabled" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"></td>
+       {% else %}
+               <td><input type="submit" name="alarm" value="disabled" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"></td>
+
+            {%endif%}
+        </tr>
+</table></form>
+</body>
+{% endblock %}

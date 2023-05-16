@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>God's Eye Log In</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="/static/Login/style.css"/>
+	<link rel="icon" href="../static/main/assets/img/GodsEye_Icon.ico">
+</head>
+<body>
+<h1>God's Eye</h1>
+<br>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form  method="post" action="/reg_post">
+			<h1>Create Account</h1>
+			<span>use your email for registration</span>
+			<input type="text" placeholder="Name"  name="name"/>
+			<input type="text"  placeholder="Phone Number"name="phone">
+			<input type="email" placeholder="Email" name="mail"/>
+			<input type="password" placeholder="Password" name="pass" />
+			<input type="password" placeholder="Confirm password" name="c_pass">
+			<input type="date" placeholder="date of birth" name="DOB">
+
+<table>
+	<tr>
+		<td><label for="male">Male</label>
+			<input type="radio" name="gender" value="male" id="male"></td>
+			<td><label for="female">Female</label>
+				<input type="radio" name="gender" value="female" id="female"></td>
+				<td>
+					<label for="other">Others</label>			
+					<input type="radio" name="gender" value="other" id="other">
+				</td>
+	</tr>
+</table>
+
+			<input type="text" placeholder="IMEI number" name="imei">
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form method="post" action="/login_post">
+			<h1>Log in</h1>
+			<input type="email"  name="Name" placeholder="Email" />
+			<input type="password" name="pass" placeholder="Password" />
+			<a href="/passreco">Forgot your password?</a>
+			<button>Log In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>Glad to be back . . !</p>
+				<button class="ghost" id="signIn">Log In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Create an account and confirm your device with you</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+  <script  src="../static/login/script.js"></script>
+
+</body>
+</html>

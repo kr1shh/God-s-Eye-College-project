@@ -1,0 +1,21 @@
+{% extends "ii.html" %}
+{% block body %}
+<body>
+<h4 class="mb-4 font-semibold text-gray-800 dark:text-gray-300">Erase Data</h4>
+<p>
+Erase your device memory:
+<form id="form1" name="form1" method="post" action="/file_update">
+  <table>
+  <tr>
+  <td>
+ <tr class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            {% if data["file_erase"] =="Enabled" %}
+            <td><input type="submit" name="file_erase" value="Erase" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"></td>
+       {% else %}
+               <td><input type="submit" name="file_erase" value="Erased" class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"></td>
+
+            {%endif%}
+        </tr></table>
+</form></body>
+{% endblock %}
+
